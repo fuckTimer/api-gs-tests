@@ -3,7 +3,7 @@ name: Restart server
 on: 
   push:
     branches:
-     - testing
+     - stable
 
 jobs:
   curl:
