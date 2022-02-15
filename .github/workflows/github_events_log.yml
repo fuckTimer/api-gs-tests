@@ -1,0 +1,16 @@
+name: Restart server
+
+on: 
+  push:
+    branches:
+     - testing
+
+jobs:
+  github_event_logs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Echo github as json
+        run: echo "${{toJSON(github.event)}}"
