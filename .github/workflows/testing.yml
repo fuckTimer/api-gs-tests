@@ -44,12 +44,12 @@ jobs:
           PORT: ${{ secrets.SFTP_PORT }}
           ARGS: --no-empty-dirs
 
-      - name: Restart Server
-        shell: bash
-        run: |
-          curl --request POST \
-            --url ${{ secrets.BASE_URL }}api/client/servers/${{ secrets.SERVER_ID }}/power \
-            --header 'Accept: application/json' \
-            --header 'Authorization: Bearer ${{ secrets.API_KEY }}' \
-            --header 'Content-Type: application/json' \
-            --data '{ "signal": "restart" }'
+      # - name: Restart Server
+        # shell: bash
+        # run: |
+          # curl --request POST \
+          #  --url ${{ secrets.BASE_URL }}api/client/servers/${{ secrets.SERVER_ID }}/power \
+          #  --header 'Accept: application/json' \
+          #  --header 'Authorization: Bearer ${{ secrets.API_KEY }}' \
+          #  --header 'Content-Type: application/json' \
+          #  --data '{ "signal": "restart" }'
