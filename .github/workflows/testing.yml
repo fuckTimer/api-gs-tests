@@ -3,7 +3,7 @@ name: Restart server
 on: 
   push:
     branches:
-     - testing
+     - testing1
 
 jobs:
   update_test_server:
