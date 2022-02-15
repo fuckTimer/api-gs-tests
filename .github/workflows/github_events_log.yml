@@ -16,4 +16,7 @@ jobs:
         run: echo "${{toJSON(github.event)}}"
 
       - name: Head commit message
-        run: echo ${{ github.event.head_commit.messge }}
+        run: echo ${{ github.event.head_commit.message }}
+
+      - name: Show commit author
+        run: echo ${{ github.event.head_commit.author.name }}
