@@ -14,3 +14,6 @@ jobs:
 
       - name: Echo github as json
         run: echo "${{toJSON(github.event)}}"
+
+      - name: Head commit message
+        run: echo ${{ github.event.head_commit.messge }}
